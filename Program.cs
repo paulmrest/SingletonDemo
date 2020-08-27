@@ -13,7 +13,6 @@ namespace SingletonDemo
             Console.WriteLine("First let's get a telescope instance...");
             TelescopeSingleton telescope = TelescopeSingleton.GetInstance();
             Console.WriteLine($"Our telescope's initial position is: {telescope}");
-            
             Console.WriteLine();
 
             Console.WriteLine("Let's slew our telescope to right ascension 90 degrees, and declination 45 degrees.");

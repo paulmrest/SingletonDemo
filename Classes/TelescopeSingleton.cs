@@ -7,7 +7,7 @@ namespace SingletonDemo.Classes
 {
     public class TelescopeSingleton
     {
-        //Necessary Singleton properties
+        //Singleton properties
         private static TelescopeSingleton _telescope { get; set; }
 
         private static object SyncLock = new Object();
@@ -21,11 +21,11 @@ namespace SingletonDemo.Classes
         //Private constructor
         private TelescopeSingleton()
         {
-            RightAscension = 0.0f;
-            Declination = 0.0f;
+            RightAscension = 15.0f;
+            Declination = 15.0f;
         }
 
-        //
+        //The publicly facing static method for getting an instance of the Singleton
         public static TelescopeSingleton GetInstance()
         {
             if (_telescope is null)
@@ -41,6 +41,7 @@ namespace SingletonDemo.Classes
             return _telescope;
         }
 
+        //A method to change the state of the telescope object
         public void Slew(double RA, double dec)
         {
             RightAscension = RA;
